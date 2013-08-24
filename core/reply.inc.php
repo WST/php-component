@@ -3,7 +3,7 @@
 /**
 * Simple PHP Jabber/XMPP blocking component implementation
 * Implements XEP-0114 <http://xmpp.org/extensions/xep-0114.html>
-* © 2011 Ilja I. Averkov <admin@jsmart.web.id>
+* © 2011 Ilya I. Averkov <admin@jsmart.web.id>
 * © 2011 Irfan Mahfudz Guntur <ayes@jsmart.web.id>
 */
 

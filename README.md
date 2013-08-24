@@ -10,8 +10,8 @@ BSM\Component class, then assign your event handlers. A simple example bot
 is available in the «examples» subdirectory.
 
 
-* Author: Ilya I. Averkov (WST) <admin@jsmart.web.id>
-* Co-author: Irfan Mahfudz Guntur (ayes) <ayes@jsmart.web.id>
+* Author: Ilya I. Averkov (WST)
+* Co-author: Irfan Mahfudz Guntur (ayes)
 * Project page: http://wst.github.com/php-component
 
 # Русский
@@ -25,6 +25,6 @@ PHP, написанной специально для веб-сервиса Lopb
 затем назначьте обработчики событий. В целях ознакомления с возможностями
 библиотеки можно использовать код из каталога «examples».
 
-* Разработчик: Ilja I. Averkov (WST) <admin@jsmart.web.id>
-* Со-разработчик: Irfan Mahfudz Guntur (ayes) <ayes@jsmart.web.id>
+* Разработчик: Ilja I. Averkov (WST)
+* Со-разработчик: Irfan Mahfudz Guntur (ayes)
 * Страница проекта: http://wst.github.com/php-component
