@@ -9,7 +9,7 @@
 
 namespace BSM;
 
-class Avatar extends Image
+class Avatar/* extends Image*/
 {
 	private $filename;
 	private $tag;
@@ -21,7 +21,7 @@ class Avatar extends Image
 	public function __construct(XMLTag & $photo_tag) {
 		$this->tag = $photo_tag;
 		file_put_contents($this->filename = tempnam(sys_get_temp_dir(), 'xmpp_avatar'), base64_decode($photo_tag->getChildValue('BINVAL')));
-		parent::__construct($this->filename);
+		//parent::__construct($this->filename);
 	}
 	
 	/**
@@ -42,7 +42,7 @@ class Avatar extends Image
 	}
 	
 	public function __destruct() {
-		parent::__destruct();
+		//parent::__destruct();
 		@ unlink($this->filename);
 	}
 }

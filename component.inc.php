@@ -17,7 +17,7 @@ define('PHP_COMPONENT_MESSAGE_INFO', 1);
 define('PHP_COMPONENT_MESSAGE_WARNING', 2);
 define('PHP_COMPONENT_MESSAGE_ERROR', 3);
 
-require __DIR__ . '/bsmimage/image.inc.php';
+//require __DIR__ . '/bsmimage/image.inc.php';
 require __DIR__ . '/core/xmltag.inc.php';
 require __DIR__ . '/core/jid.inc.php';
 require __DIR__ . '/core/vcard.inc.php';
