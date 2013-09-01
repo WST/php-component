@@ -14,12 +14,12 @@ class Stanza
 	private $tag;
 	private $component;
 	
-	public function __construct(Component & $component, XMLTag & $tag) {
-		$this->tag = & $tag;
-		$this->component = & $component;
+	public function __construct(Component $component, XMLTag $tag) {
+		$this->tag = $tag;
+		$this->component = $component;
 	}
 	
-	public function & tag() {
+	public function tag() {
 		return $this->tag;
 	}
 	

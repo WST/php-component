@@ -358,7 +358,7 @@ class Component
 		$this->stack[$this->depth]->insertCharacterData($data);
 	}
 	
-	private function handleComponentIQGet(Stanza & $stanza) {
+	private function handleComponentIQGet(Stanza $stanza) {
 		$query_type = $stanza->queryType();
 		switch($query_type) {
 			case 'http://jabber.org/protocol/stats':
@@ -397,7 +397,7 @@ class Component
 		}
 	}
 	
-	private function handleComponentIQSet(Stanza & $stanza) {
+	private function handleComponentIQSet(Stanza $stanza) {
 		$query_type = $stanza->queryType();
 		switch($query_type) {
 			case 'jabber:iq:register':
@@ -406,7 +406,7 @@ class Component
 		}
 	}
 	
-	private function handleComponentIQResult(Stanza & $stanza) {
+	private function handleComponentIQResult(Stanza $stanza) {
 		if($stanza->tag()->hasChild('vCard')) {
 			if(is_callable(@ $this->handlers['iq/vCard'])) {
 				return call_user_func($this->handlers['iq/vCard'], $stanza);
@@ -414,7 +414,7 @@ class Component
 		}
 	}
 	
-	private function handleComponentIQ(Stanza & $stanza) {
+	private function handleComponentIQ(Stanza $stanza) {
 		switch($stanza->type()) {
 			case 'set': return $this->handleComponentIQSet($stanza); break;
 			case 'get': return $this->handleComponentIQGet($stanza); break;
@@ -422,7 +422,7 @@ class Component
 		}
 	}
 	
-	private function handleIQ(Stanza & $stanza) {
+	private function handleIQ(Stanza $stanza) {
 		// XEP-0050 command execution
 		if(!is_null($command = $stanza->tag()->getChild('command'))) {
 			(isset($this->commands[$node = $command->getAttribute('node')]) && is_callable($this->commands[$node][1])) ? call_user_func($this->commands[$node][1], $stanza) : $stanza->reply()->serviceUnavailable();
@@ -456,7 +456,7 @@ class Component
 		}
 	}
 	
-	private function handleStanza(Stanza & $stanza) {
+	private function handleStanza(Stanza $stanza) {
 		if(!in_array($name = $stanza->name(), array('stream:error', 'handshake'))) {
 			$this->log("got <$name> from {$stanza->from()} to {$stanza->to()}", PHP_COMPONENT_MESSAGE_INFO, true);
 		}
@@ -584,7 +584,7 @@ class Component
 	* @note on the first call this function will create the form and register a 'jabber:iq:register' feature, so, you don’t have to worry about it
 	* @return Form a link to a Form instance
 	*/
-	public function & form() {
+	public function form() {
 		if(is_null($this->registration_form)) {
 			$this->registration_form = new Form();
 			$this->registration_form->registerTemplate();

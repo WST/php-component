@@ -14,9 +14,9 @@ class Reply
 	private $component = NULL;
 	private $stanza = NULL;
 	
-	public function __construct(Component & $component, Stanza & $stanza) {
-		$this->component = & $component;
-		$this->stanza = & $stanza;
+	public function __construct(Component $component, Stanza $stanza) {
+		$this->component = $component;
+		$this->stanza = $stanza;
 	}
 	
 	private function iq($type, $data) {

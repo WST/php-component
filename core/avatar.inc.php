@@ -18,7 +18,7 @@ class Avatar/* extends Image*/
 	* Constructs a BSMAvatar instance from a <PHOTO> tag of the vCard
 	* @param BSMXMLTag link to an instance of BSMXMLTag representing <PHOTO> element of the vCard
 	*/
-	public function __construct(XMLTag & $photo_tag) {
+	public function __construct(XMLTag $photo_tag) {
 		$this->tag = $photo_tag;
 		file_put_contents($this->filename = tempnam(sys_get_temp_dir(), 'xmpp_avatar'), base64_decode($photo_tag->getChildValue('BINVAL')));
 		//parent::__construct($this->filename);

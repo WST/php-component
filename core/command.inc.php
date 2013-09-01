@@ -67,7 +67,7 @@ class Command
 		return $this->cmdtag->insertAttribute('status', $status);
 	}
 	
-	public function & createForm($type = 'result') {
+	public function createForm($type = 'result') {
 		$this->form = new Form(NULL, $type);
 		$this->cmdtag->insertChildElement($this->form->tag());
 		return $this->form;

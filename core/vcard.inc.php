@@ -19,8 +19,8 @@ class VCard
 	* Accepts a link to an instance of BSMXMLTag that represents <vCard> element of an iq query
 	* @param BSMXMLTag vCard tag
 	*/
-	public function __construct(XMLTag & $vcard_tag) {
-		$this->tag = & $vcard_tag;
+	public function __construct(XMLTag $vcard_tag) {
+		$this->tag = $vcard_tag;
 	}
 	
 	/**
