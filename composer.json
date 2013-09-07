@@ -1,6 +1,6 @@
 {
 	"name": "wst/php-component",
-	"type": "captcha",
+	"type": "package",
 	"description": "XEP-0114 protocol implementation",
 	"keywords": ["xmpp", "jabber", "component", "XEP-0114"],
 	"homepage": "https://github.com/WST/php-component",
