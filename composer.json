@@ -1,0 +1,26 @@
+{
+	"name": "wst/php-component",
+	"type": "captcha",
+	"description": "XEP-0114 protocol implementation",
+	"keywords": ["xmpp", "jabber", "component", "XEP-0114"],
+	"homepage": "https://github.com/WST/php-component",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Ilya Averkov",
+			"email": "admin@jsmart.web.id",
+			"homepage": "http://averkov.web.id/"
+		}
+	],
+	"require": {
+		"php": ">=5.4.0",
+		"ext-sockets": "*",
+		"ext-xml": "*"
+	},
+	"autoload": {
+		"psr-0": {
+			"BSM\\Component": ""
+		}
+	},
+	"target-dir": "WST/php-component"
+}
