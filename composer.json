@@ -18,8 +18,6 @@
 		"ext-xml": "*"
 	},
 	"autoload": {
-		"psr-0": {
-			"BSM\\Component": ""
-		}
+		"files": ["component.php"]
 	}
 }
